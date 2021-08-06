@@ -6,7 +6,9 @@ const app = express()
 
 app.set('port', 8000)
 
-connect('mongodb://localhost:27017/prueba_users', {
+const uri = 'mongodb+srv://Pepe:FbuiDkFHckqpJY2B@cluster0.8bqqh.mongodb.net/prueba_users?retryWrites=true&w=majority'
+
+connect(uri, {
   useUnifiedTopology: true,
   useNewUrlParser: true
 }, (err) => {
